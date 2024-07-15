@@ -1,0 +1,29 @@
+.main-container {
+  background-color: #8b93ff;
+}
+.nav-container {
+  width: 1200px;
+  padding: 10px;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav-link ul {
+  list-style: none;
+}
+.links {
+  text-decoration: none;
+  color: #fff7fc;
+  font-size: 19px;
+  font-weight: 400px;
+}
+.nav-container h1 {
+  color: #fff7fc;
+  font-size: 25px;
+}

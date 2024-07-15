@@ -1,0 +1,46 @@
+.ExpenseList {
+  width: 70vw !important;
+  margin: auto;
+}
+table {
+  border: 1px solid black;
+  margin: 30px auto;
+  border-collapse: collapse;
+  min-width: 70vw !important;
+}
+td {
+  background-color: whitesmoke;
+  border: 1px solid black;
+  padding: 5px;
+}
+th {
+  color: wheat;
+  background-color: black;
+  padding: 4px;
+  border: 1px solid wheat;
+}
+.expense-total div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.btn-edit {
+  border: none;
+  background-color: #5a5af1;
+  padding: 7px;
+  border-radius: 6px;
+}
+.btn-delete {
+  border: none;
+  background-color: #eb405a;
+  padding: 7px;
+  border-radius: 6px;
+}
+.list-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5755fe;
+  margin-top: 30px;
+  gap: 20px;
+}

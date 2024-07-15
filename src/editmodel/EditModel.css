@@ -1,0 +1,62 @@
+.model {
+  background-color: #000000b4;
+  width: 100vw;
+  height: 1000px;
+  position: fixed;
+  z-index: 10;
+}
+.form-box {
+  background-color: #fafafadd;
+  width: 30%;
+  padding: 20px;
+  margin: 60px auto;
+  border-radius: 8px;
+  position: absolute;
+  left: 38%;
+  z-index: 10;
+}
+
+.form-box input {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px 2px #ececee;
+  border: none;
+}
+.form-box select {
+  margin-top: 20px;
+}
+.form-box input:focus-visible {
+  outline: none;
+}
+.form-box input:hover {
+  box-shadow: 1px 1px 1px 1px #7d9bd7;
+}
+.form-box .file {
+  margin-top: 20px;
+}
+.model-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.model-btn .edit {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #8687cd;
+  color: white;
+}
+.model-btn .cancle {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #7d9bd7;
+  color: white;
+}

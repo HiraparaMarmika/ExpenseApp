@@ -1,0 +1,36 @@
+.expenseform {
+  background-color: #fff7fc;
+  width: 30%;
+  padding: 15px;
+  margin: 50px auto;
+  box-shadow: 1px 1px 1px 1px #8b93ff;
+}
+.expenseform h1 {
+  text-align: center;
+}
+.expenseform input {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 10px;
+  border: none;
+  box-shadow: 1px 1px 1px 1px#B3C8CF;
+}
+.expenseform input:focus-visible {
+  outline: none;
+}
+.expenseform select {
+  margin-top: 20px;
+  padding: 8px;
+}
+.btn button {
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  background-color: #8b93ff;
+  color: #fff7fc;
+  font-size: 15px;
+  border: none;
+}
