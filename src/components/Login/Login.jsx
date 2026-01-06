@@ -3,20 +3,23 @@ import "./Login.css";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { loginschema } from "../../schemas";
+import { FaWallet } from "react-icons/fa6";
+import logo from "../../assets/expense-img.png";
 
 const initialValues = {
   name: "",
   email: "",
   password: "",
 };
+
 export default function Login() {
   const navigate = useNavigate();
+
   const { values, errors, touched, handleChange, handleBlur, handleSubmit } =
     useFormik({
-      initialValues: initialValues,
+      initialValues,
       validationSchema: loginschema,
       onSubmit: (values, action) => {
-        console.log(values);
         localStorage.setItem("login", JSON.stringify(values));
         action.resetForm();
         navigate("/");
@@ -24,51 +27,73 @@ export default function Login() {
     });
 
   return (
-    <>
-      <div className="login-container">
-        <div className="login-main">
-          <form action="" onSubmit={handleSubmit}>
-            <h1>Login Now!</h1>
+    <div className="login-page">
+
+      {/* LEFT SECTION */}
+      <div className="login-left">
+        <img src={logo} alt="Logo" />
+        <h1>Personal Expense Tracker</h1>
+        <p>Track, manage & control your daily expenses easily</p>
+      </div>
+
+      {/* RIGHT SECTION */}
+      <div className="login-right">
+        <div className="login-card">
+
+          <div className="header-row">
+            <FaWallet className="login-icon" />
+            <h3 className="app-title">Welcome Back</h3>
+          </div>
+
+          <h2 className="login-title">Login Now!</h2>
+
+          <form onSubmit={handleSubmit}>
+            <label>Name</label>
             <input
               type="text"
               name="name"
-              placeholder="Enter Name*"
+              placeholder="Enter name"
               value={values.name}
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            {errors.name && touched.name ? (
+            {errors.name && touched.name && (
               <p className="validation">{errors.name}</p>
-            ) : null}
+            )}
+
+            <label>Email</label>
             <input
               type="email"
               name="email"
-              placeholder="Enter Email*"
+              placeholder="Email address"
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            {errors.email && touched.email ? (
+            {errors.email && touched.email && (
               <p className="validation">{errors.email}</p>
-            ) : null}
+            )}
+
+            <label>Password</label>
             <input
               type="password"
               name="password"
-              id=""
-              placeholder="Enter Password*"
+              placeholder="Password"
               value={values.password}
               onChange={handleChange}
               onBlur={handleBlur}
             />
-            {errors.password && touched.password ? (
+            {errors.password && touched.password && (
               <p className="validation">{errors.password}</p>
-            ) : null}
-            <div className="login-btn">
-              <button>Login</button>
-            </div>
+            )}
+
+            <button type="submit" className="signin-btn">
+              SIGN IN
+            </button>
           </form>
         </div>
       </div>
-    </>
+
+    </div>
   );
 }

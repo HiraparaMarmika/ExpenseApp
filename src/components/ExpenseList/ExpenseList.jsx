@@ -63,15 +63,7 @@ export default function ExpenseList({ formDataHandler }) {
     setOpenModel(false);
   };
 
-  const uploadFile = (files) => {
-    var read = new FileReader();
-
-    read.onload = function (e) {
-      setFile(read.result);
-    };
-
-    read.readAsText(files[0]);
-  };
+  
   return (
     <>
       {openModel && (
@@ -103,12 +95,7 @@ export default function ExpenseList({ formDataHandler }) {
               placeholder="search expense.."
               onChange={handleChange}
             />
-            <button>
-              <CSVLink data={formData}>Download</CSVLink>
-            </button>
-            <ReactFileReader handleFiles={uploadFile} fileTypes={".csv"}>
-              <button className="btn"> Upload </button>
-            </ReactFileReader>
+           
           </div>
         </div>
 
@@ -156,10 +143,9 @@ export default function ExpenseList({ formDataHandler }) {
               </tr>
             </>
           ) : (
-            <p style={{ textAlign: "center" }}>No results found</p>
+            <p colSpan="6" className="no-data">No results found</p>
           )}
         </table>
-        <div>{file}</div>
       </div>
     </>
   );

@@ -29,13 +29,6 @@ export default function Navbar() {
                 </NavLink>
               </li>
             </ul>
-            <ul>
-              <li>
-                <NavLink className="links" to="/expense-chart">
-                  Expense chart
-                </NavLink>
-              </li>
-            </ul>
           </div>
           <div>
             <NavLink className="links" to="/login" onClick={logout}>
