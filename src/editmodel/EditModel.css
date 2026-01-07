@@ -26,7 +26,13 @@
   border: none;
 }
 .form-box select {
+   width: 100%;
   margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 .form-box input:focus-visible {
   outline: none;

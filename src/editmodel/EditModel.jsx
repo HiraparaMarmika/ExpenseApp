@@ -84,7 +84,6 @@ export default function EditModel({ editdata, onEdit, cancle }) {
                 value={allData?.date}
                 onChange={allDataHandler}
               />
-              <label htmlFor="">Category:</label>&nbsp;&nbsp;&nbsp;
               <select
                 value={allData?.category}
                 onChange={allDataHandler}
