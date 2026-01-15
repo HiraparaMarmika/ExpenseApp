@@ -4,6 +4,7 @@ import "./ExpenseList.css";
 import EditModel from "../../editmodel/EditModel";
 import { CSVLink } from "react-csv";
 import ReactFileReader from "react-file-reader";
+import { useNavigate } from "react-router-dom";
 export default function ExpenseList({ formDataHandler }) {
   const [openModel, setOpenModel] = useState(false);
   const [file, setFile] = useState("");
@@ -63,7 +64,11 @@ export default function ExpenseList({ formDataHandler }) {
     setOpenModel(false);
   };
 
-  
+const navigate = useNavigate();
+
+const handleReadMore = (id) => {
+  navigate(`/expense-Details/${id}`);
+};
   return (
     <>
       {openModel && (
@@ -95,7 +100,7 @@ export default function ExpenseList({ formDataHandler }) {
               placeholder="search expense.."
               onChange={handleChange}
             />
-           
+
           </div>
         </div>
 
@@ -107,6 +112,7 @@ export default function ExpenseList({ formDataHandler }) {
             <th>Category</th>
             <th>Delete</th>
             <th>Edit</th>
+            <th>ReadMore</th>
           </tr>
           {filteredData.length > 0 ? (
             <>
@@ -136,6 +142,12 @@ export default function ExpenseList({ formDataHandler }) {
                       Edit
                     </button>
                   </td>
+                  <td><button
+                    className="btn-readmore"
+                    onClick={()=>handleReadMore(item.id)}
+                  >
+                    Read More
+                  </button></td>
                 </tr>
               ))}
               <tr className="expense-total">
