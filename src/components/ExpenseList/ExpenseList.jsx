@@ -2,12 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../context/DataProvider";
 import "./ExpenseList.css";
 import EditModel from "../../editmodel/EditModel";
-import { CSVLink } from "react-csv";
-import ReactFileReader from "react-file-reader";
 import { useNavigate } from "react-router-dom";
 export default function ExpenseList({ formDataHandler }) {
   const [openModel, setOpenModel] = useState(false);
-  const [file, setFile] = useState("");
   const [editdata, setEditData] = useState("");
   const { formData, setFormData } = useContext(MyContext);
 

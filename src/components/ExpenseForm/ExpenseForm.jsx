@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./ExpenseForm.css";
 import { useNavigate } from "react-router-dom";
-import { MyContext } from "../../context/DataProvider";
 export default function ExpenseForm({ formDataHandler }) {
   const nav = useNavigate();
 
